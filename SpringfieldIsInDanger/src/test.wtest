@@ -1,0 +1,23 @@
+import example.*
+
+test "burns" {
+	assert.equals(centralBurns.produccion(springfield), 1000000)
+}
+test "exBosque" {
+	assert.equals(centralExBosque.produccion(springfield), 18500000)
+}
+test "elSuspiro"{
+	assert.equals(centralElSuspiro.produccion(springfield), 2000000)
+}
+test "contaminacion"{
+	assert.equals(springfield.contaminantes(), [centralExBosque] )
+}
+test "necesidad?"{
+	assert.that(springfield.produccionTotal(springfield.centrales()) >= springfield.necesidad() )
+}
+test "conPapas"{
+	assert.that(true)
+}//como se cambian las variables en los tests??
+test "lasMasPiolas"{
+	assert.equals(region.mayoresProductores(), [hidroelectrica, centralExBosque])
+}
